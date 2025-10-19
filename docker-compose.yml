@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: review-filmes
+    restart: always
+    ports:
+      - "3031:3031"
+    env_file:
+      - .env
+    volumes:
+      - .:/app          # so your code updates live in dev
+    environment:
+      - NODE_ENV=production
+    command: npm start
