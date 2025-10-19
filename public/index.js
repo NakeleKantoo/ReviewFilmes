@@ -60,7 +60,6 @@ saveBtn.onclick = async () => {
   const body = {
     nomefilme: nomefilme.value,
     nota: parseInt(nota.value),
-    generoid: parseInt(generoid.value),
     comentario: comentario.value,
     data: data.value
   };
