@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reviews de Filmes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🎬 Reviews de Filmes</h1>
+    <div class="actions">
+      <button id="addBtn">+ Adicionar Review</button>
+      <button id="filterBtn">🔍 Filtrar</button>
+    </div>
+  </header>
+
+  <main id="reviewsGrid" class="grid"></main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Nova Avaliação</h2>
+      <input id="nomefilme" placeholder="Nome do filme">
+      <input id="nota" type="number" placeholder="Nota (0-5)">
+      <textarea id="comentario" placeholder="Comentário"></textarea>
+      <input id="data" type="date">
+      <button id="save">Salvar</button>
+      <button id="close">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Modal de filtro -->
+  <div id="filterModal" class="modal">
+    <div class="modal-content">
+      <h2>Filtrar Avaliações</h2>
+      <input id="filterNome" placeholder="Nome do filme">
+      <input id="filterNotaMin" type="number" placeholder="Nota mínima">
+      <label>Data de:</label>
+      <input id="filterDataDe" type="date">
+      <label>Data até:</label>
+      <input id="filterDataAte" type="date">
+      <div class="modal-buttons">
+        <button id="applyFilter">Aplicar</button>
+        <button id="clearFilter">Limpar</button>
+        <button id="closeFilter">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
