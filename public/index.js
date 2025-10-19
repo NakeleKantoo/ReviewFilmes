@@ -51,7 +51,7 @@ function renderReviews(reviews) {
 }
 
 async function loadReviews() {
-  const res = await fetch("/api/avaliacoes");
+  const res = await fetch("./api/avaliacoes");
   allReviews = await res.json();
   renderReviews(allReviews);
 }
@@ -64,7 +64,7 @@ saveBtn.onclick = async () => {
     data: data.value
   };
 
-  await fetch("/api/avaliacoes", {
+  await fetch("./api/avaliacoes", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body)
@@ -75,7 +75,7 @@ saveBtn.onclick = async () => {
 };
 
 window.deleteReview = async id => {
-  await fetch(`/api/avaliacoes/${id}`, { method: "DELETE" });
+  await fetch(`./api/avaliacoes/${id}`, { method: "DELETE" });
   await loadReviews();
 };
 
